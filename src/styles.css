@@ -4,9 +4,7 @@
   padding: 0;
   margin: 0;
 }
-body {
-  background-color: var(--container-background-color);
-}
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -20,9 +18,10 @@ a {
 
 :root {
   --container-background-color: #f0f1ee;
-  --primary-font-family: "EB+Garamond";
-  --secondary-font-family: "Raleway";
   --header-icon-font-family: "Oswald";
+  --primary-font-family: "EB Garamond";
+  --secondary-font-family: "Raleway";
+  --stylish-font-family: "Pacifico";
   --primary-avocado-color: #8a9b6e;
   --primary-lunar-green-color: #354733;
   --primary-accent-color: #dddea0;
