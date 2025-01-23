@@ -9,7 +9,7 @@ import { NewsLetterComponent } from './news-letter/news-letter.component';
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [HeroSectionComponent, TakeCareComponent],
+  imports: [HeroSectionComponent, TakeCareComponent, MostPopularComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',
 })

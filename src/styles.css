@@ -20,6 +20,13 @@ a {
   font-weight: bold;
   font-family: var(--primary-font-family);
   color: var(--primary-lunar-green-color);
+  span {
+    color: var(--primary-avocado-color);
+  }
+}
+.section {
+  margin-bottom: 10px;
+  font-size: 44px;
 }
 .description {
   line-height: 1.5;
