@@ -16,6 +16,17 @@ a {
   text-decoration: none;
 }
 
+.title {
+  font-weight: bold;
+  font-family: var(--primary-font-family);
+  color: var(--primary-lunar-green-color);
+}
+.description {
+  line-height: 1.5;
+  font-size: 14px;
+  color: var(--secondary-color);
+  font-family: var(--secondary-font-family);
+}
 :root {
   --container-background-color: #f0f1ee;
   --header-icon-font-family: "Oswald";

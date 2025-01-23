@@ -9,16 +9,26 @@
 }
 
 .title {
-  color: var(--primary-lunar-green-color);
   font-size: 44px;
-  font-weight: bold;
-  font-family: var(--primary-font-family);
   span {
     color: var(--primary-avocado-color);
   }
 }
 .description {
-  font-size: 14px;
-  color: var(--secondary-color);
-  font-family: var(--secondary-font-family);
+  width: 70%;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 35px;
+  }
+  img {
+    display: none;
+  }
 }

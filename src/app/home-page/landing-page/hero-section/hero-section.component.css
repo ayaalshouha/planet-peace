@@ -29,22 +29,18 @@ button:hover {
   color: var(--primary-lunar-green-color);
 }
 
-.hero-title {
-  font-weight: bold;
+.title {
   font-size: 80px;
-  color: var(--primary-lunar-green-color);
-  font-family: var(--primary-font-family);
 
   span {
     color: var(--primary-avocado-color);
   }
 }
 
-.hero-description {
+.description {
   color: var(--secondary-color);
   font-family: var(--secondary-font-family);
   font-size: 14px;
-  line-height: 1.5;
   width: 80%;
 }
 
