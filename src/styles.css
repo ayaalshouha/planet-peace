@@ -4,14 +4,21 @@
   padding: 0;
   margin: 0;
 }
-
+body {
+  background-color: var(--container-background-color);
+}
 .container {
   width: 80%;
   margin: 0 auto;
 }
-
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 :root {
-  --container-background-clor: #f0f1ee;
+  --container-background-color: #f0f1ee;
   --primary-font-family: "EB+Garamond";
   --secondary-font-family: "Raleway";
   --header-icon-font-family: "Oswald";

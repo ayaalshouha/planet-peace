@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-box {
+  .logo-text {
+    font-family: var(--header-icon-font-family);
+    color: var(--dark-color);
+    font-weight: 400;
+  }
+}
+
+.nav-links {
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+ul li a {
+  font-family: var(--secondary-font-family);
+  color: var(--primary-lunar-green-color);
+}
+.icons-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+a:hover,
+a:active {
+  color: var(--primary-avocado-color);
+}
