@@ -21,15 +21,11 @@
 
 @media (max-width: 700px) {
   .container {
-    width: 100%;
     justify-content: center;
     margin-bottom: 10px;
     padding-top: 40px;
   }
   .title {
     font-size: 35px;
-  }
-  img {
-    display: none;
   }
 }
