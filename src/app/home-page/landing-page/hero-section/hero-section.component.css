@@ -1,12 +1,10 @@
 .container {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 100px;
 }
 .hero {
-  max-width: 600px;
   .stylish-text {
     font-family: var(--stylish-font-family);
   }
@@ -33,7 +31,7 @@ button:hover {
 
 .hero-title {
   font-weight: bold;
-  font-size: 84px;
+  font-size: 80px;
   color: var(--primary-lunar-green-color);
   font-family: var(--primary-font-family);
 
@@ -43,14 +41,16 @@ button:hover {
 }
 
 .hero-description {
-  font-size: 14px;
-  width: 80%;
   color: var(--secondary-color);
   font-family: var(--secondary-font-family);
+  font-size: 14px;
+  line-height: 1.5;
+  width: 80%;
 }
 
 img {
-  width: 550px;
+  margin-right: -130px;
+  width: 600px;
   filter: grayscale(1);
   -webkit-filter: grayscale(1);
   transition: 2s ease;
@@ -63,8 +63,4 @@ img {
 img:hover {
   filter: grayscale(0);
   -webkit-filter: grayscale(0);
-}
-
-.landing-img {
-  margin: -150px;
 }

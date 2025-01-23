@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--container-background-color);
+  padding-top: 80px;
+  width: 100%;
+}
+
+.title {
+  color: var(--primary-lunar-green-color);
+  font-size: 44px;
+  font-weight: bold;
+  font-family: var(--primary-font-family);
+  span {
+    color: var(--primary-avocado-color);
+  }
+}
+.description {
+  font-size: 14px;
+  color: var(--secondary-color);
+  font-family: var(--secondary-font-family);
+}
