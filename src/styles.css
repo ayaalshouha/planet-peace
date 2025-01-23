@@ -17,6 +17,7 @@ ul {
 a {
   text-decoration: none;
 }
+
 :root {
   --container-background-color: #f0f1ee;
   --primary-font-family: "EB+Garamond";
