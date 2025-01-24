@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { PlantsService } from '../../../services/plants.service';
 @Component({
@@ -9,7 +9,8 @@ import { PlantsService } from '../../../services/plants.service';
   styleUrl: './most-popular.component.css',
 })
 export class MostPopularComponent implements OnInit, OnDestroy {
-  plants: any[] = [];
+  plants = signal<any[]>([]);
+  limited = signal<any[]>([]);
   private destroy$ = new Subject<void>();
 
   constructor(private plantsService: PlantsService) {}
@@ -17,14 +18,14 @@ export class MostPopularComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.plantsService
       .all()
-      .pipe(takeUntil(this.destroy$)) // Unsubscribe on destroy
+      .pipe(takeUntil(this.destroy$))
       .subscribe({
         next: (response) => {
-          this.plants = response;
-          console.log(response[0]); // Logging the first plant as an example
+          this.plants.set(response.data);
+          this.limited.set(this.plants().slice(0, 5));
         },
         error: (err) => {
-          console.error('Error fetching plants:', err); // Handle errors
+          console.error('Error fetching plants:', err);
         },
       });
   }

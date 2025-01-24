@@ -8,16 +8,15 @@
       everywhere. Don’t miss out—find your next favorite today!
     </div>
   </header>
-  <!--
-  @for(plant of plants ; track $index){
   <div class="plants">
+    @if(plants()){ @for(plant of plants(); track $index){
     <div class="plant">
-      <img [src]="plant."-description">
-        <div class="plant-name"></div>
-        <div class="plant-price"></div>
-        <div class="plant-type"></div>
+      <img [src]="plant.image_url" />
+      <div class="desc-box">
+        <div class="plant-name title">{{ plant.common_name }}</div>
+        <div class="plant-family description">{{ plant.family }}</div>
       </div>
     </div>
+    } }
   </div>
-} -->
 </div>

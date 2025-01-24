@@ -10,3 +10,27 @@
 header {
   text-align: center;
 }
+.plants {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+.plant {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .desc-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+}
+
+img {
+  width: 80px;
+  height: 100px;
+}
