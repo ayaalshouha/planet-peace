@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
 
+## Overview
+A responsive Angular-based website offering a variety of plant products, showcasing advanced Angular features. It integrates APIs to render and display diverse plant types using a shared service and Angular's HttpClient module. The project leverages RxJS for event-based programming and operators to enhance interactivity and responsiveness.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
