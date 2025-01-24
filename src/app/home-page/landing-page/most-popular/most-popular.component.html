@@ -9,12 +9,12 @@
     </div>
   </header>
   <div class="plants">
-    @if(plants()){ @for(plant of plants(); track $index){
+    @if(plants()){ @for(plant of limited(); track $index){
     <div class="plant">
       <img [src]="plant.image_url" />
       <div class="desc-box">
         <div class="plant-name title">{{ plant.common_name }}</div>
-        <div class="plant-family description">{{ plant.family }}</div>
+        <div class="plant-family description">{{ plant.family }} family</div>
       </div>
     </div>
     } }
