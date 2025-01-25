@@ -6,6 +6,7 @@
 }
 html,
 body {
+  scroll-behavior: smooth;
   height: 100%;
 }
 .container {
@@ -17,6 +18,10 @@ ul {
 }
 a {
   text-decoration: none;
+}
+a:hover,
+a:active {
+  color: var(--primary-avocado-color) !important;
 }
 
 .title {

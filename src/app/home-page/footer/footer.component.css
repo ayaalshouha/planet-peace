@@ -20,7 +20,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   .title {
-    font-size: 26px;
+    font-size: 30px;
     color: var(--primary-avocado-color);
   }
   .description {
