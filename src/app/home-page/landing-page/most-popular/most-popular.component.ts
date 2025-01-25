@@ -22,7 +22,7 @@ export class MostPopularComponent implements OnInit, OnDestroy {
       .subscribe({
         next: (response) => {
           this.plants.set(response.data);
-          this.limited.set(this.plants().slice(8, 16));
+          this.limited.set(this.plants().slice(5, 13));
         },
         error: (err) => {
           console.error('Error fetching plants:', err);

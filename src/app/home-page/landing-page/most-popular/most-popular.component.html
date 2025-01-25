@@ -11,11 +11,15 @@
   <div class="plants">
     @if(plants()){ @for(plant of limited(); track $index){
     <div class="plant">
-      <img [src]="plant.image_url" />
-      <div class="desc-box">
-        <div class="plant-name title">{{ plant.common_name }}</div>
-        <div class="plant-family description">{{ plant.family }} family</div>
-      </div>
+      <button class="img-box">
+        <img [src]="plant.image_url" />
+      </button>
+      <button>
+        <div class="desc-box">
+          <div class="plant-name title">{{ plant.common_name }}</div>
+          <div class="plant-family description">{{ plant.family }} family</div>
+        </div>
+      </button>
     </div>
     } }
   </div>
