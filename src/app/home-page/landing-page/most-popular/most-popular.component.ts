@@ -1,10 +1,11 @@
 import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { PlantsService } from '../../../services/plants.service';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-most-popular',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './most-popular.component.html',
   styleUrl: './most-popular.component.css',
 })
