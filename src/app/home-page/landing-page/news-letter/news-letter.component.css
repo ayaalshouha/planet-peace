@@ -20,13 +20,8 @@ section {
   gap: 15px;
   justify-content: center;
   padding: 30px;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.1
-  ); /* Transparent white for a lighter background */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Very light gray shadow */
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   .title {
     font-size: 36px;
     color: var(--primary-accent-color);
