@@ -52,16 +52,8 @@ button {
   cursor: pointer;
   background-color: var(--primary-lunar-green-color);
   color: white;
-  transition: ease-in-out 0.5s;
-  -webkit-transition: ease-in-out 0.5s;
-  -moz-transition: ease-in-out 0.5s;
-  -ms-transition: ease-in-out 0.5s;
-  -o-transition: ease-in-out 0.5s;
 }
-button:hover {
-  color: var(--primary-lunar-green-color);
-  background-color: white;
-}
+
 input:active {
   border: none;
 }

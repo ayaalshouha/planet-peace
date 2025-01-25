@@ -24,10 +24,6 @@
   }
 }
 
-button:hover {
-  background-color: white;
-  color: var(--primary-lunar-green-color);
-}
 
 .title {
   font-size: 80px;

@@ -55,6 +55,18 @@ a:active {
   --secondary-color: #808276;
 }
 
+button {
+  transition: ease-in-out 0.5s !important;
+  -webkit-transition: ease-in-out 0.5s !important;
+  -moz-transition: ease-in-out 0.5s !important;
+  -ms-transition: ease-in-out 0.5s !important;
+  -o-transition: ease-in-out 0.5s !important;
+}
+button:hover {
+  background-color: var(--primary-avocado-color) !important;
+  color: white !important;
+}
+
 @media (max-width: 700px) {
   .section {
     font-size: 35px;
