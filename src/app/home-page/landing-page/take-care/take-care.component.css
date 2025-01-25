@@ -89,4 +89,8 @@
     margin-bottom: 10px;
     padding-top: 40px;
   }
+
+  .img-box {
+    display: none;
+  }
 }
