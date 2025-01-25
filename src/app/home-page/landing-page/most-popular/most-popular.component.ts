@@ -30,7 +30,9 @@ export class MostPopularComponent implements OnInit, OnDestroy {
         },
       });
   }
-
+  plantSet(plant: any) {
+    this.plantsService.setPlant(plant);
+  }
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();

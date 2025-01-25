@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+button {
+  border: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: var(--primary-lunar-green-color);
+  color: white;
+}

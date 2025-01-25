@@ -11,10 +11,14 @@
   <div class="plants">
     @if(plants()){ @for(plant of limited(); track $index){
     <div class="plant">
-      <button routerLink="product-page" class="img-box">
+      <button
+        (click)="plantSet(plant)"
+        routerLink="product-page"
+        class="img-box"
+      >
         <img [src]="plant.image_url" />
       </button>
-      <button routerLink="product-page">
+      <button (click)="plantSet(plant)" routerLink="product-page">
         <div class="desc-box">
           <div class="plant-name title">{{ plant.common_name }}</div>
           <div class="plant-family description">{{ plant.family }} family</div>

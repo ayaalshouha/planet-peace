@@ -4,4 +4,6 @@
   </div>
 </div>
 
-<app-plant></app-plant>
+@if (plant) {
+<app-plant [plant]="plant"> </app-plant>
+}
