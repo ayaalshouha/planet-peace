@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-plant',
@@ -7,9 +7,23 @@ import { Component, Input } from '@angular/core';
   templateUrl: './plant.component.html',
   styleUrl: './plant.component.css',
 })
-export class PlantComponent {
-  @Input() plant: any;
-  constructor() {
-    console.log(this.plant);
+export class PlantComponent implements OnChanges {
+  @Input() plant: any = null;
+
+  // This hook runs every time the input changes
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['plant'] && changes['plant'].currentValue) {
+      this.plant = this.plant ? JSON.parse(this.plant) : null;
+      console.log('Updated plant:', this.plant);
+    }
   }
+
+  // private _plant!: string; // For storing the serialized plant string
+  // deserializedPlant: any = null; // For the deserialized object
+  // @Input() set plant(serializedPlant: string) {
+  //   this._plant = serializedPlant;
+  //   this.selectedPlant = this.selectedPlant
+  //     ? JSON.parse(serializedPlant)
+  //     : null;
+  // }
 }

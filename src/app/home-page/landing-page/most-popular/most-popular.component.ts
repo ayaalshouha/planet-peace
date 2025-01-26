@@ -10,7 +10,7 @@ import { RouterLink, Router } from '@angular/router';
 export class MostPopularComponent implements OnChanges {
   @Input() plants: any[] | null = [];
   displayedPlants: any[] = [];
-
+  selectedPlant: any;
   constructor(private router: Router) {}
 
   // This lifecycle hook is called whenever any @Input() properties change.
@@ -20,5 +20,9 @@ export class MostPopularComponent implements OnChanges {
     if (changes['plants'] && this.plants) {
       this.displayedPlants = this.plants.slice(8, 16);
     }
+  }
+
+  getSerializedPlant(plant: any): string | null {
+    return plant ? JSON.stringify(plant) : null;
   }
 }

@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PlantComponent } from './plant/plant.component';
 import { ActivatedRoute } from '@angular/router';
-import { log } from 'console';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-product-page',
@@ -18,6 +18,6 @@ export class ProductPageComponent implements OnInit {
       this.plant = params['plant'];
     });
 
-    console.log('selected plant id' + this.plant.id);
+    console.log('selected plant id ' + this.plant);
   }
 }

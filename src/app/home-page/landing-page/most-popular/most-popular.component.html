@@ -14,11 +14,14 @@
       <button
         class="img-box"
         routerLink="product-page"
-        [queryParams]="{ plant: plant }"
+        [queryParams]="{ plant: getSerializedPlant(plant) }"
       >
         <img [src]="plant.image_url" />
       </button>
-      <button routerLink="product-page" [queryParams]="{ plant: plant }">
+      <button
+        routerLink="product-page"
+        [queryParams]="{ plant:  getSerializedPlant(plant) }"
+      >
         <div class="desc-box">
           <div class="plant-name title">{{ plant.common_name }}</div>
           <div class="plant-family description">{{ plant.family }} family</div>
