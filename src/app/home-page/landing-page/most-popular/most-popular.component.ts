@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 @Component({
   selector: 'app-most-popular',
   standalone: true,
@@ -11,7 +11,7 @@ export class MostPopularComponent implements OnChanges {
   @Input() plants: any[] | null = [];
   displayedPlants: any[] = [];
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   // This lifecycle hook is called whenever any @Input() properties change.
   // So when the plants array is updated (after the async data is resolved and passed down),

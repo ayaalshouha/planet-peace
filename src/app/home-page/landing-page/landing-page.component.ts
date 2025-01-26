@@ -32,8 +32,6 @@ export class LandingPageComponent implements OnInit {
 //resolver is a data provider and will be called whenever the rotue become active
 // even if it was active
 export const resolvePlants: ResolveFn<any> = () => {
-  console.log(':this is the resolver');
-
   const plantService = inject(PlantsService);
   const plants = plantService.fetchPlants();
   return plants;

@@ -1,12 +1,16 @@
 .container {
   padding: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
 }
 .description-box {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
+
 img {
   width: 500px;
   height: 500px;
@@ -15,10 +19,10 @@ img {
   font-size: 52px;
 }
 .description {
-  font-size: 32px;
+  font-size: 18px;
 }
 button {
-  font-size: 32px;
+  font-size: 24px;
   border: none;
   padding: 10px 30px;
   cursor: pointer;

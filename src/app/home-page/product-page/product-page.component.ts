@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PlantComponent } from './plant/plant.component';
+import { ActivatedRoute } from '@angular/router';
+import { log } from 'console';
 
 @Component({
   selector: 'app-product-page',
@@ -8,4 +10,14 @@ import { PlantComponent } from './plant/plant.component';
   templateUrl: './product-page.component.html',
   styleUrl: './product-page.component.css',
 })
-export class ProductPageComponent {}
+export class ProductPageComponent implements OnInit {
+  plant: any;
+  constructor(private route: ActivatedRoute) {}
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params) => {
+      this.plant = params['plant'];
+    });
+
+    console.log('selected plant id' + this.plant.id);
+  }
+}

@@ -11,10 +11,14 @@
   <div class="plants">
     @if(plants){ @for(plant of displayedPlants; track $index){
     <div class="plant">
-      <button routerLink="product-page" class="img-box">
+      <button
+        class="img-box"
+        routerLink="product-page"
+        [queryParams]="{ plant: plant }"
+      >
         <img [src]="plant.image_url" />
       </button>
-      <button routerLink="product-page">
+      <button routerLink="product-page" [queryParams]="{ plant: plant }">
         <div class="desc-box">
           <div class="plant-name title">{{ plant.common_name }}</div>
           <div class="plant-family description">{{ plant.family }} family</div>

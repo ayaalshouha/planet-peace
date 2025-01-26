@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { PlantsService } from '../../../services/plants.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-plant',
@@ -9,6 +8,8 @@ import { PlantsService } from '../../../services/plants.service';
   styleUrl: './plant.component.css',
 })
 export class PlantComponent {
-  plant: any;
-  constructor(private plantService: PlantsService) {}
+  @Input() plant: any;
+  constructor() {
+    console.log(this.plant);
+  }
 }
