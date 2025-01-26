@@ -17,7 +17,5 @@ export class ProductPageComponent implements OnInit {
     this.route.queryParams.subscribe((params) => {
       this.plant = params['plant'];
     });
-
-    console.log('selected plant id ' + this.plant);
   }
 }

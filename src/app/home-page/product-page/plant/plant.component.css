@@ -1,24 +1,46 @@
 .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  gap: 60px;
-}
-.description-box {
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 50px;
+  gap: 50px;
+}
+.bold {
+  font-weight: bold;
+}
+.description {
+  margin-bottom: 5px;
+}
+.description-box header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.img-box {
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
-
+.small-imgs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.small-imgs img {
+  width: 70px;
+  height: 70px;
+}
 .prize {
+  font-size: 20px !important;
   color: black;
   font-weight: bold;
 }
 img {
   width: 100%;
-  height: 100%;
 }
 .title {
   font-size: 52px;
@@ -28,26 +50,14 @@ img {
 }
 .description {
   font-size: 16px;
-  min-width: 600px;
+  min-width: 800px;
 }
 
 button {
   font-size: 24px;
   border: none;
-  padding: 10px 30px;
+  padding: 10px 40px;
   cursor: pointer;
   background-color: var(--primary-lunar-green-color);
   color: white;
-}
-
-.id {
-  display: inline-block;
-  background-color: var(--primary-avocado-color);
-  color: white;
-  padding: 5px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }

@@ -1,13 +1,12 @@
 <div class="container">
-  <div class="img-box">
-    <img [src]="plant.image_url" alt="plant-image" />
-  </div>
   <div class="description-box">
-    <!-- commom name -->
-    <p class="title">{{ plant.common_name }}</p>
-    <p class="description">A Majestic Addition to Your Plant Collection</p>
+    <header>
+      <p class="title">{{ plant.common_name }}</p>
+      <button>Add to cart</button>
+    </header>
+    <p class="description bold">A Majestic Addition to Your Plant Collection</p>
     <!-- plant id -->
-    <p class="id description">{{ plant.id }}</p>
+    <p class="plantID description">{{ plant.id }}</p>
     <p class="prize description">$139.99</p>
     <p class="sub title">Description</p>
     <p class="description">
@@ -15,6 +14,13 @@
       also known as the "Swiss Cheese Plant." With its large, glossy,
       fenestrated leaves, this plant adds a bold, elegant touch to any space.
     </p>
-    <button>Add to cart</button>
+  </div>
+  <div class="img-box">
+    <img [src]="plant.image_url" alt="plant-image" />
+    <div class="small-imgs">
+      <img [src]="plant.image_url" alt="plant-image" />
+      <img [src]="plant.image_url" alt="plant-image" />
+      <img [src]="plant.image_url" alt="plant-image" />
+    </div>
   </div>
 </div>
