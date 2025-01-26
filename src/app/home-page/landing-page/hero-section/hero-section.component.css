@@ -24,7 +24,6 @@
   }
 }
 
-
 .title {
   font-size: 80px;
 
@@ -63,7 +62,6 @@ img:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 10px; */
   }
   img {
     margin: 0;

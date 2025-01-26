@@ -46,6 +46,7 @@ img {
   display: block;
 }
 .menu {
+  z-index: 999;
   display: none;
   position: absolute;
   top: 40px;
@@ -92,9 +93,6 @@ a:hover {
   }
   .nav-links {
     display: none;
-  }
-  .burger-icon {
-    display: block;
   }
 }
 @media (min-width: 701px) {
