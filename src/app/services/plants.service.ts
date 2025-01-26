@@ -10,8 +10,10 @@ export class PlantsService {
 
   fetchPlants(): Observable<any[]> {
     if (this.plantsCache.length > 0) {
+      console.log('plant fetched succe');
       return this.plantsCache$.asObservable();
     }
+    console.log('fetching is start now....');
     return this.http
       .get<{ data: any[] }>(
         `${environment.apiBaseUrl}?token=${environment.trefleToken}`
@@ -19,8 +21,10 @@ export class PlantsService {
       .pipe(
         map((response) => response.data),
         tap((data) => {
+          console.log('plant fetched succe');
           this.plantsCache = data;
           this.plantsCache$.next(this.plantsCache);
+          console.log('fetching is ending now....');
         })
       );
   }

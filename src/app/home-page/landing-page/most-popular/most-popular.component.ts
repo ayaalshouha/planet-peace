@@ -1,7 +1,5 @@
-import { Component, inject, input } from '@angular/core';
-import { PlantsService } from '../../../services/plants.service';
-import { ResolveFn, RouterLink } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-most-popular',
   standalone: true,
@@ -9,14 +7,18 @@ import { Observable } from 'rxjs';
   templateUrl: './most-popular.component.html',
   styleUrl: './most-popular.component.css',
 })
-export class MostPopularComponent {
-  plants = input.required<any[]>();
-}
+export class MostPopularComponent implements OnChanges {
+  @Input() plants: any[] | null = [];
+  displayedPlants: any[] = [];
 
-//resolver is a data provider and will be called whenver the rotue become active
-// even if it was active
-export const resolvePlants: ResolveFn<any> = () => {
-  const plantService = inject(PlantsService);
-  const plants = plantService.fetchPlants();
-  return plants;
-};
+  constructor() {}
+
+  // This lifecycle hook is called whenever any @Input() properties change.
+  // So when the plants array is updated (after the async data is resolved and passed down),
+  // ngOnChanges() will trigger.
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['plants'] && this.plants) {
+      this.displayedPlants = this.plants.slice(8, 16);
+    }
+  }
+}
