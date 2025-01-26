@@ -9,16 +9,12 @@
     </div>
   </header>
   <div class="plants">
-    @if(plants()){ @for(plant of limited(); track $index){
+    @if(plants()){ @for(plant of plants(); track $index){
     <div class="plant">
-      <button
-        (click)="plantSet(plant)"
-        routerLink="product-page"
-        class="img-box"
-      >
+      <button routerLink="product-page" class="img-box">
         <img [src]="plant.image_url" />
       </button>
-      <button (click)="plantSet(plant)" routerLink="product-page">
+      <button routerLink="product-page">
         <div class="desc-box">
           <div class="plant-name title">{{ plant.common_name }}</div>
           <div class="plant-family description">{{ plant.family }} family</div>
