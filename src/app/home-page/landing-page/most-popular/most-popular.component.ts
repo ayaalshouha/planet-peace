@@ -18,7 +18,7 @@ export class MostPopularComponent implements OnChanges {
   // ngOnChanges() will trigger.
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['plants'] && this.plants) {
-      this.displayedPlants = this.plants.slice(8, 16);
+      this.displayedPlants = this.plants.slice(9, 17);
     }
   }
 

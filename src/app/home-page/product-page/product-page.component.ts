@@ -12,7 +12,9 @@ import { AsyncPipe } from '@angular/common';
 })
 export class ProductPageComponent implements OnInit {
   plant: any;
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) {
+    window.scrollTo(0, 0);
+  }
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
       this.plant = params['plant'];
